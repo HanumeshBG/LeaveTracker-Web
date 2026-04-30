@@ -22,10 +22,10 @@ const LeaveCard = (leave) => {
       </div>
 
       {/* Stats */}
-      <div className="text-xs mt-3 text-center">
-        <p>Available: {available}</p>
-        <p>Consumed: {consumed}</p>
-        <p>Annual: {total}</p>
+      <div className="text-s mt-3">
+        <p>Available: <span className="badge badge-success">{available}</span></p>
+        <p>Consumed: <span className="badge badge-warning">{consumed}</span></p>
+        <p>Annual: <span className="badge badge-secondary">{total}</span></p>
       </div>
     </div>
   );
