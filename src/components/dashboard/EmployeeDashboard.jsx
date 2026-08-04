@@ -1,13 +1,18 @@
 import LeaveSummaryGrid from "./LeaveSummaryGrid";
+import { useNavigate } from "react-router-dom";
 
 const EmployeeDashboard = () => {
+  const navigate = useNavigate();
+  const handleLeave = () => {
+    navigate("/leave")
+  }
   return (
     <div className="p-6 space-y-6">
 
       <h1 className="text-xl font-semibold">My Dashboard</h1>
 
       {/* Quick Actions */}
-      <button className="btn btn-primary">Apply Leave</button>
+      <button className="btn btn-primary" onClick={handleLeave}>Apply Leave</button>
 
       {/* Personal Summary */}
       {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

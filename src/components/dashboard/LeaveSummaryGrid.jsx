@@ -2,7 +2,7 @@ import LeaveCard from "./LeaveCard";
 
 const LeaveSummaryGrid = () => {
   const leaves = [
-    { title: "Sick Leave", available: 9, consumed: 3, total: 12, color: "#f87171" },
+    { title: "Sick Leave", available: 10, consumed: 4, total: 13, color: "#f87171" },
     { title: "Earned Leave", available: 5, consumed: 3, total: 8, color: "#34d399" },
     { title: "Casual Leave", available: 5, consumed: 0, total: 5, color: "#fbbf24" },
     { title: "Unpaid Leave", available: "∞", consumed: 6, total: 6, color: "#60a5fa" },
