@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router'
 import { toast } from "react-hot-toast";
 import { useDispatch } from 'react-redux';
-import { addUser } from '../utils/userSlice';
+import { addUser } from '../utils/userSlices/userSlice';
 
 const initialState = {
     firstName: '',
@@ -35,28 +35,41 @@ const Login = () => {
         });
     }
     const handleClick = async () => {
-        if(isLoginPage) {
-            // Handle login logic here
-            let res = await axios.post(`${BASE_URL}/login`, {
-                        email: state.email,
-                        password: state.password
-                    }, {withCredentials: true})
-            dispatch(addUser(res.data))  
-            toast.success("Logged in successfully!");
-            navigate('/dashboard')
-        } else {
-            // Handle sign up logic here
-            let res = await axios.post(`${BASE_URL}/signup`,
-                state,
-                {withCredentials: true})
-            dispatch(addUser(res.data))  
-            toast.success("Signed up successfully!");
-            navigate('/dashboard')
+        try {
+            if(isLoginPage) {
+                // Handle login logic here
+                let res = await axios.post(`${BASE_URL}/login`, {
+                            email: state.email,
+                            password: state.password
+                        }, {withCredentials: true})
+                dispatch(addUser(res.data))  
+                toast.success("Logged in successfully!");
+                navigate('/dashboard')
+            } else {
+                // Handle sign up logic here
+                let res = await axios.post(`${BASE_URL}/signup`,
+                    state,
+                    {withCredentials: true})
+                dispatch(addUser(res.data))  
+                toast.success("Signed up successfully!");
+                navigate('/dashboard')
+            }
+        } catch (error) {
+            console.error("Error during login/signup:", error);
+            if (error.response) {
+                toast.error(
+                    error.response.data.error || "Something went wrong"
+                );
+            } else if (error.request) {
+                toast.error("Server is not responding");
+            } else {
+                toast.error("Something went wrong");
+            }
         }
     }
 
   return (
-    <div className="card card-dash w-96 shadow-xl">
+    <div className="card w-96 shadow-xl">
         <div className="card-body">
             <h2 className="card-title flex justify-center">{isLoginPage ? 'Login' : 'Sign Up'}</h2>
             <div>

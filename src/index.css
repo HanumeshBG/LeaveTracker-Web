@@ -2,3 +2,28 @@
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, cupcake;
 }
+
+body {
+    background-image: url('../images/pexels-photo-450035.jpeg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+ /*   background-color:burlywood;  */
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    max-width: 100%;
+    max-height: 100%;
+    color: white !important;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.fieldset-legend {
+  color: white !important;
+}
+
+.input, .select, .textarea, .bgColor {
+  background-color: rgba(0, 0, 0, 0.9) !important;;
+  color: white !important;
+}

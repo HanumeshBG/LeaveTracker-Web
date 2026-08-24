@@ -100,7 +100,7 @@ const Profile = () => {
     };
 
     return (
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center">
             <div className="card w-96 shadow-xl p-5">
                 <div className="flex flex-col items-center gap-3">
 

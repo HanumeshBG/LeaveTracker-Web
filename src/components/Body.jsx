@@ -7,7 +7,7 @@ const Body = () => {
   return (
     <div className='w-full min-h-screen flex flex-col'>
       <NavBar />
-      <div className='flex-1 flex justify-center items-center'>
+      <div className='flex-1 flex justify-center items-center mt-3'>
         <Outlet />
       </div>
       <Footer />

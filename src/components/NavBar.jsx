@@ -12,7 +12,7 @@ const NavBar = () => {
     }
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar shadow-2xl">
         <div className="flex-1">
             <Link to="/dashboard" className="btn btn-ghost text-xl">Leave Tracker</Link>
         </div>
@@ -27,7 +27,7 @@ const NavBar = () => {
             </div>
             <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                className="menu menu-sm dropdown-content bgColor rounded-box z-1 mt-3 w-52 p-2 shadow">
                 <li>
                 <Link to="/profile/view">
                     Profile

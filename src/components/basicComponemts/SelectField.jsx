@@ -12,7 +12,7 @@ const SelectField = (props) => {
     return (
         <fieldset className="fieldset">
             <legend className="fieldset-legend">{Label}:</legend>
-            <select value={Value} name={FieldName} className="select" onChange={handleChange}>
+            <select value={Value} name={FieldName} className="select w-full" onChange={handleChange}>
                 <option disabled={true} value='-1'>
                     Pick a {Label}
                 </option>

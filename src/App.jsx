@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import Dashboard from "./components/dashboard/LeaveDashboard";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import AdminSetting from './components/AdminSetting';
 import Leave from "./components/Leave";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
@@ -23,6 +24,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="profile/view" element={<Profile />} />
             <Route path="profile/edit" element={<Profile />} />
+            <Route path="/settings" element={<AdminSetting />} />
             <Route path="/leave" element={<Leave />} />
           </Route>
         </Routes>

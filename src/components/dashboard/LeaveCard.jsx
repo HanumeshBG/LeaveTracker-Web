@@ -4,7 +4,7 @@ const LeaveCard = (leave) => {
   const percentage = (consumed / total) * 100;
 
   return (
-    <div className="bg-white p-4 rounded-xl shadow flex flex-col items-center">
+    <div className="bgColor p-4 rounded-xl shadow flex flex-col items-center">
       <h3 className="font-medium mb-2">{title}</h3>
 
       {/* Circle */}
