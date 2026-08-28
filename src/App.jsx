@@ -30,7 +30,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       </Provider>
-      <Toaster position="top-right" />
+      <Toaster position="top-center" />
     </>
   )
 }
