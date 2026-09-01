@@ -100,125 +100,123 @@ const Profile = () => {
     };
 
     return (
-        <div className="flex justify-center">
-            <div className="card w-96 shadow-xl p-5">
-                <div className="flex flex-col items-center gap-3">
+        <div className="card w-[50%] shadow-xl p-5">
+            <div className="flex flex-col items-center gap-3">
 
-                    {/* Profile Image */}
-                    <img
-                        src={state.photoUrl}
-                        alt="profile"
-                        className="w-32 h-32 rounded-full object-cover"
-                    />
+                {/* Profile Image */}
+                <img
+                    src={state.photoUrl}
+                    alt="profile"
+                    className="w-32 h-32 rounded-full object-cover"
+                />
 
-                    {isEditing && (
-                        <input type="file" onChange={handlePhotoChange} />
-                    )}
+                {isEditing && (
+                    <input type="file" onChange={handlePhotoChange} />
+                )}
 
-                    {/* Info */}
-                    <div className="w-full">
-                        <fieldset className="fieldset">
-                          <legend className="fieldset-legend">First Name: </legend>
-                          <input type="text" className="input" placeholder="Enter your first name"
-                              name="firstName"
-                              value={state.firstName}
-                              onChange={handleChange }
-                              disabled={!isEditing}
-                          />
-                        </fieldset>
-                        <fieldset className="fieldset">
-                          <legend className="fieldset-legend">Last Name: </legend>
-                          <input type="text" className="input" placeholder="Enter your last name"
-                              name="lastName" 
-                              value={state.lastName}
-                              onChange={handleChange }
-                              disabled={!isEditing}
-                          />
-                        </fieldset>
-
-                        {/* Gender */}
-                        <fieldset className="fieldset">
-                          <legend className="fieldset-legend">Gender: </legend>
-                          <select defaultValue="Pick a Gender" name="gender" value={state.gender} onChange={handleChange} className="select" disabled={!isEditing}>
-                              <option disabled={true}>Pick a Gender</option>
-                              <option value="male">Male</option>
-                              <option value="female">Female</option>
-                              <option value="other">Other</option>
-                          </select>
-                        </fieldset>
-
-                        <fieldset className="fieldset">
-                          <legend className="fieldset-legend">Email ID: </legend>
-                          <input type="text" className="input" 
-                              placeholder="Enter your email"
-                              name="email"
-                              value={state.email}
-                              onChange={handleChange}
-                              disabled={!isEditing}
-                          />
-                        </fieldset>
-
-                        <fieldset className="fieldset">
-                          <legend className="fieldset-legend">Phone Number: </legend>
-                          <input type="number" className="input" placeholder="Enter your phone number"
-                              name="phoneNumber"
-                              value={state.phoneNumber}
-                              onChange={handleChange} 
-                                disabled={!isEditing}
-                          />
-                        </fieldset>
-
-                        <fieldset className="fieldset">
-                          <legend className="fieldset-legend">Department: </legend>
-                          <select defaultValue="Pick a Department" 
-                            name="department" 
-                            value={state.department} 
-                            onChange={handleChange} 
-                            className="select" 
+                {/* Info */}
+                <div className="w-full">
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">First Name: </legend>
+                        <input type="text" className="input" placeholder="Enter your first name"
+                            name="firstName"
+                            value={state.firstName}
+                            onChange={handleChange }
                             disabled={!isEditing}
-                          >
-                            {['HR', 'Engineering', 'Sales', 'Marketing', 'Finance', 'Operations', "Development", "Testing", "Support", "Management", "Other"].map((dept) => (
-                              <option key={dept} value={dept}>{dept}</option>
-                            ))}
-                          </select>
-                        </fieldset>
+                        />
+                    </fieldset>
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">Last Name: </legend>
+                        <input type="text" className="input" placeholder="Enter your last name"
+                            name="lastName" 
+                            value={state.lastName}
+                            onChange={handleChange }
+                            disabled={!isEditing}
+                        />
+                    </fieldset>
 
-                        <fieldset className="fieldset">
-                          <legend className="fieldset-legend">About: </legend>
-                          <textarea className="textarea" placeholder="Bio" 
-                            value={state.about} 
+                    {/* Gender */}
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">Gender: </legend>
+                        <select defaultValue="Pick a Gender" name="gender" value={state.gender} onChange={handleChange} className="select" disabled={!isEditing}>
+                            <option disabled={true}>Pick a Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">Email ID: </legend>
+                        <input type="text" className="input" 
+                            placeholder="Enter your email"
+                            name="email"
+                            value={state.email}
+                            onChange={handleChange}
+                            disabled={!isEditing}
+                        />
+                    </fieldset>
+
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">Phone Number: </legend>
+                        <input type="number" className="input" placeholder="Enter your phone number"
+                            name="phoneNumber"
+                            value={state.phoneNumber}
                             onChange={handleChange} 
                             disabled={!isEditing}
-                            name="about"
-                          />
-                        </fieldset>
-                    </div>
+                        />
+                    </fieldset>
 
-                    {/* Buttons */}
-                    {!isEditing ? (
-                        <button
-                            className="btn btn-primary w-full"
-                            onClick={() => setIsEditing(true)}
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">Department: </legend>
+                        <select defaultValue="Pick a Department" 
+                        name="department" 
+                        value={state.department} 
+                        onChange={handleChange} 
+                        className="select" 
+                        disabled={!isEditing}
                         >
-                            Edit Profile
-                        </button>
-                    ) : (
-                        <div className="flex gap-2 w-full">
-                            <button
-                                className="btn btn-success flex-1"
-                                onClick={handleSave}
-                            >
-                                Save
-                            </button>
-                            <button
-                                className="btn btn-outline flex-1"
-                                onClick={handleCancel}
-                            >
-                                Cancel
-                            </button>
-                        </div>
-                    )}
+                        {['HR', 'Engineering', 'Sales', 'Marketing', 'Finance', 'Operations', "Development", "Testing", "Support", "Management", "Other"].map((dept) => (
+                            <option key={dept} value={dept}>{dept}</option>
+                        ))}
+                        </select>
+                    </fieldset>
+
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend">About: </legend>
+                        <textarea className="textarea" placeholder="Bio" 
+                        value={state.about} 
+                        onChange={handleChange} 
+                        disabled={!isEditing}
+                        name="about"
+                        />
+                    </fieldset>
                 </div>
+
+                {/* Buttons */}
+                {!isEditing ? (
+                    <button
+                        className="btn btn-primary w-full"
+                        onClick={() => setIsEditing(true)}
+                    >
+                        Edit Profile
+                    </button>
+                ) : (
+                    <div className="flex gap-2 w-full">
+                        <button
+                            className="btn btn-success flex-1"
+                            onClick={handleSave}
+                        >
+                            Save
+                        </button>
+                        <button
+                            className="btn btn-outline flex-1"
+                            onClick={handleCancel}
+                        >
+                            Cancel
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );

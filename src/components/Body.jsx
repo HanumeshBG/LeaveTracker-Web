@@ -13,7 +13,7 @@ const Body = () => {
       <NavBar />
       <div className="flex flex-1 transition-all duration-300">
         <Sidebar collapsed={sidebarCollapsed} setCollapsed={setSidebarCollapsed} />
-        <div className={`flex-1 flex justify-center items-center mt-3 transition-all duration-300 ${sidebarCollapsed ? "ml-[70px]" : "ml-[230px]"}`}>
+        <div className={`flex-1 flex justify-center items-center transition-all duration-300 py-2`}>
           <Outlet />
         </div>
       </div>
