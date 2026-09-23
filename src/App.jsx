@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import Profile from "./components/Profile";
 import AdminSetting from './components/AdminSetting';
 import Leave from "./components/Leave";
+import MyLeaves from "./components/MyLeaves";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="profile/edit" element={<Profile />} />
             <Route path="/settings" element={<AdminSetting />} />
             <Route path="/leave" element={<Leave />} />
+            <Route path="/my-leaves" element={<MyLeaves />} />
           </Route>
         </Routes>
       </BrowserRouter>

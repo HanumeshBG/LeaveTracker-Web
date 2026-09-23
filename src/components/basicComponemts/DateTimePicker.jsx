@@ -10,7 +10,7 @@ const DateTimePicker = (props) => {
   return (
     <fieldset className="fieldset">
             <legend className="fieldset-legend">{Label}:</legend>
-            <input type={Type} name={FieldName} value={Value} onChange={handleChange} className="input w-full" />
+            <input type={Type} name={FieldName} value={Value} onChange={handleChange} className="input w-full date-input" />
     </fieldset>
   )
 }

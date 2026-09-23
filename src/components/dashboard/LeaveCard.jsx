@@ -1,6 +1,6 @@
 // LeaveCard.jsx
 const LeaveCard = (leave) => {
-    const { title, available, consumed, total, color } = leave;
+    const { title, available, consumed, total, carryforword, color } = leave;
   const percentage = (consumed / total) * 100;
 
   return (
@@ -23,9 +23,10 @@ const LeaveCard = (leave) => {
 
       {/* Stats */}
       <div className="text-s mt-3">
+        <p>Total: <span className="badge badge-secondary">{total}</span></p>
+        <p>Used: <span className="badge badge-warning">{consumed}</span></p>
         <p>Available: <span className="badge badge-success">{available}</span></p>
-        <p>Consumed: <span className="badge badge-warning">{consumed}</span></p>
-        <p>Annual: <span className="badge badge-secondary">{total}</span></p>
+        <p>Carry Forward: <span className="badge badge-success">{carryforword}</span></p>
       </div>
     </div>
   );

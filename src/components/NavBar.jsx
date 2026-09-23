@@ -1,13 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 import { BASE_URL } from '../utils/constants'
 
 const NavBar = () => {
+     const navigate = useNavigate()
+     
+    const handleLogout = async () => {
+        await axios.post(`${BASE_URL}/logout`, {}, { withCredentials: true });
+        navigate('/login') // Redirect to login page after logout
+    }
+
   return (
     <div className="navbar shadow-2xl">
-        <div className="flex-1">
-            <Link to="/dashboard" className="btn btn-ghost text-xl">Leave Tracker</Link>
-        </div>
+        <div className="flex-1 text-xl">Leave Tracker</div>
         <div className="flex gap-2">
             <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
@@ -25,6 +31,7 @@ const NavBar = () => {
                     Profile
                 </Link>
                 </li>
+                <li><a onClick={handleLogout}>Logout</a></li>
             </ul>
             </div>
         </div>

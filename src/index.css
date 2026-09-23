@@ -28,74 +28,16 @@ body {
   color: white !important;
 }
 
-/* .sidebar {
-    background: rgba(20, 20, 20, 0.65);
-    backdrop-filter: blur(15px);
-    border-right: 1px solid rgba(255, 255, 255, 0.15);
+.rbc-toolbar, .rbc-btn-group button {
+  color: white !important;
 }
 
-.sidebar-logo {
-    font-size: 24px;
-    font-weight: bold;
-    padding: 25px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.rbc-today, .rbc-off-range-bg, .rbc-active {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  color: white !important;
 }
 
-.sidebar nav {
-    padding: 20px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
 }
-
-.sidebar-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 13px 15px;
-    color: #ddd;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.2s;
-}
-
-.sidebar-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-}
-
-.sidebar-item.active {
-    background: #4f32d8;
-    color: white;
-}
-
-.sidebar-logout {
-    margin-top: auto;
-    padding: 15px;
-}
-
-.sidebar-logout button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 13px 15px;
-    border: none;
-    border-radius: 8px;
-    background: transparent;
-    color: #ddd;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.sidebar-logout button:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.content-collapsed {
-    margin-left: 70px;
-}
-
-.content-expanded {
-    margin-left: 230px;
-} */

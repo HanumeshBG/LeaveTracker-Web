@@ -1,7 +1,7 @@
 import React, {  useEffect, useReducer } from 'react'
 import InputField from './basicComponemts/InputField'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchAdminSetting, addAdminSetting } from '../utils/settingsSlices/adminSettingSlice' 
+import { fetchAdminSetting, addAdminSetting } from '../utils/settingsSlices/adminSettingSlice'
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { BASE_URL } from '../utils/constants';

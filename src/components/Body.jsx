@@ -9,15 +9,15 @@ const Body = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
 
   return (
-    <div className='w-full min-h-screen flex flex-col'>
-      <NavBar />
-      <div className="flex flex-1 transition-all duration-300">
-        <Sidebar collapsed={sidebarCollapsed} setCollapsed={setSidebarCollapsed} />
+    <div className='w-full min-h-screen flex'>
+      <Sidebar collapsed={sidebarCollapsed} setCollapsed={setSidebarCollapsed} />
+      <div className="flex flex-col flex-1 transition-all duration-300">
+        <NavBar />
         <div className={`flex-1 flex justify-center items-center transition-all duration-300 py-2`}>
           <Outlet />
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }
